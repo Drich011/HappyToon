@@ -1,0 +1,98 @@
+@media (max-width:1314px) {
+    .webtoon-ads{
+        // .img-wrapper{
+        //     width: calc(100% / 4);
+        // }
+        width: calc(100% / 3 - 4px);
+        max-width: unset;
+    }
+}
+
+@media (max-width:500px) {
+    .webtoon-ads{
+        width: calc(100% / 2 - 3px);
+    }
+}
+@media(max-width:1199px){
+    .comic-details {
+        .comic-details {
+            .comic-footer  {
+                button{
+                    max-width: 49%;
+                }
+            }
+        }
+    }
+}
+@media(max-width:991px){
+    .comic-details{
+        display: contents;
+        .comic-picture{
+            max-width: unset;
+        }
+        .comic-details{
+            width: unset;
+        }
+    }
+}
+@media(max-width:767px){
+    .list-episode-card{
+        .episode-card{
+            .title{
+                font-size: 12px;
+            }
+            .details{
+                font-size: 12px;
+            }
+            
+        }
+        
+    }
+}
+@media(max-width:536px){
+    .list-episode-card{
+        .episode-card{
+            .title{
+                font-size: 12px;
+            }
+            .details{
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                /* flex-wrap: wrap; */
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        }
+        
+    }
+}
+@media(max-width:450px){
+    .comic-details{
+        .comic-details{
+            button{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media(max-width:382px){
+    .comic-details{
+        .comic-details{
+            .comic-footer2{
+                flex-direction: column;
+                .genre-details{
+                    margin-bottom: 4px;
+                }
+                .genre-rating{
+                    text-align: unset;
+                    margin-bottom: 5px;
+                }
+            }
+            button{
+                font-size: 10px;
+            }
+        }
+    }
+}

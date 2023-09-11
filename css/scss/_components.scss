@@ -1,0 +1,926 @@
+.webtoon-body{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
+    .webtoon-body2{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-color: #4f4e59; 
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        &.width-fit{
+            width: fit-content !important;
+        }
+        .webtoon-details{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            background-color: #211c2d;
+            height: 35px;
+            border-radius: 3px;
+            
+            button{
+                height: 25px;
+                width: 60px;
+                border-radius: 5px;
+                color: #ffffff;
+                border-color: #967d38;
+                background-color: #50457f;
+            } 
+        }
+        .webtoon-choices{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: -15px;
+            .bodychoices{
+                display: flex;
+                gap: 5px;
+                button{
+                    height: 30px;
+                    width: 60px;
+                    color: #ECCF81;
+                    background-color: #211c2d;
+                    border-radius: 5px;
+
+                }
+            }   
+                        
+            .bodychoices-2{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                button{
+                    height: 30px;
+                    width: 60px;
+                    color: #ECCF81;
+                    background-color: #211c2d;
+                    border-radius: 5px;
+
+                }
+                $color_1: #ECCF81;
+                input[type="radio"] {
+                    &:checked {
+                        position: absolute;
+                        left: -9999px;
+                        + {
+                            label {
+                                position: relative;
+                                padding-left: 28px;
+                                cursor: pointer;
+                                line-height: 20px;
+                                display: inline-block;
+                                color: $color_1;
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 100%;
+                                    background: #fff;
+                                }
+                                &:after {
+                                    content: '';
+                                    width: 12px;
+                                    height: 12px;
+                                    background: #640101;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 3px;
+                                    border-radius: 100%;
+                                    -webkit-transition: all 0.2s ease;
+                                    transition: all 0.2s ease;
+                                    opacity: 1;
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                    &:not(:checked) {
+                        position: absolute;
+                        left: -9999px;
+                        + {
+                            label {
+                                position: relative;
+                                padding-left: 28px;
+                                cursor: pointer;
+                                line-height: 20px;
+                                display: inline-block;
+                                color: $color_1;
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 18px;
+                                    height: 18px;
+                                    border: 1px solid #ddd;
+                                    border-radius: 100%;
+                                    background: #fff;
+                                }
+                                &:after {
+                                    content: '';
+                                    width: 12px;
+                                    height: 12px;
+                                    background: #F87DA9;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                    border-radius: 100%;
+                                    -webkit-transition: all 0.2s ease;
+                                    transition: all 0.2s ease;
+                                    opacity: 0;
+                                    -webkit-transform: scale(0);
+                                    transform: scale(0);
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }      
+        }
+        .sort-choices{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            .sort-choices-item{
+                width: 12.5%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding-top: 5px;
+                button{
+                    width: 94%;
+                    height: 45px;
+                    background-color: #11101a;
+                    color: #967d38;
+                }
+              
+            }
+            .a{
+                background-color: #42385f;
+                padding-top: 5px;
+                button{
+                    background-color: #7966ad;
+                    color: white;
+                }
+            } 
+        }
+        .button-choices{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            margin-bottom: -6px;
+            .sort-choices-item{
+                width: 12.5%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding-top: 5px;
+                button{
+                    width: 94%;
+                    height: 45px;
+                    background-color: #11101a;
+                    color: #967d38;
+                }
+              
+            }
+            button{
+                width: 12%;
+                height: 45px;
+                background-color: #11101a;
+                color: #967d38;
+            }
+            .a{
+                background-color: #42385f;
+                padding-top: 5px;
+                button{
+                    background-color: #7966ad;
+                    color: white;
+                }
+            } 
+        }
+        .login{
+            min-width: 30%;
+            display: block;
+            justify-content: center;
+            background: #211c2d;
+            padding: 20px;
+            box-shadow: 0 0 6px #0000001c;
+            border-radius: 5px;
+            
+            .login-details{
+                margin-bottom: 5px;
+                input{
+                    width: 100%;
+                    background-color: #11101a;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    color: #ffffff;
+                    &:focus-visible {
+                        outline: none;
+                    }
+                    }
+            }
+            .login-button{
+                display: flex;
+                justify-content: space-between;
+                button{
+                    background-color: #50457f;
+                    border-radius: 20px;
+                    width: 49%;
+                    color: #ffffff;
+                    &:hover{
+                        background-color: #280cd1;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        .member-info{
+            flex-wrap: wrap;
+            background-color: #211c2d;
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+            padding: 5px;
+            position: relative;
+            span{
+                margin-bottom: 5px;
+                width: 100%;
+            }
+        }
+        .bookmarks-section{
+            width: 100%;
+            height: 100%;
+            background-color: #4f4e59; 
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+            &.width-fit{
+                width: fit-content !important;
+            }
+        }
+        .bookmarks{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+            .bookmarks-card{   
+                width: 100%;
+                text-align: center;
+                display: flex;
+                gap: 5px; 
+                flex-wrap: wrap;
+                span{
+                    width: 100%;
+                }
+                .bookmarks-left{
+                    width: 100%;
+                    i{
+                        color: #000000;
+                    } 
+                    button{
+                        width: fit-content;
+                        border-radius: 5px;
+                        padding: 10px;
+                        background-color: #50457f;
+                        color: white;
+                        margin-bottom: 10px;
+                        text-align: end;
+                        float: right;
+                        
+                     }
+                }
+                .bookmarks-title{
+                    height: 50px;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #211c2d;
+                  
+                    border-radius: 3px;
+                }
+            }
+    
+
+        }
+        .bookmarks-header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-direction: column;
+
+            .bookmarks-left{
+                width: 50%;
+                i{
+                    color: #000000;
+                }
+            }
+            .bookmarks-right{
+                display: block;
+                width: 100%;
+                position: relative;
+                .bookmarks-title{
+                    height: 50px;
+                    width: 100%;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #211c2d;
+                    border-radius: 3px;
+                }
+
+            }
+            button{
+                width: fit-content;
+                border-radius: 5px;
+                padding: 10px;
+                background-color: #50457f;
+                color: white;
+                margin-bottom: 10px;
+                text-align: end;
+                float: right;
+                
+             }
+
+            .bookmarks-title{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-radius: 3px;
+                flex-wrap: wrap;
+                span{
+                    border-radius: 3px;
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    background-color: #211c2d;
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+.signup{
+    // max-width: 30%;
+    min-width: 30%;
+    display: block;
+    justify-content: center;
+    background: #211c2d;
+    padding: 20px;
+    box-shadow: 0 0 6px #0000001c;
+    border-radius: 5px;
+
+    .signup-head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        span{
+            font-size: large;
+            font-style: normal;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+    
+    .login-details{
+        margin-bottom: 5px;
+        input{
+            width: 100%;
+            background-color: #11101a;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: white;
+            &:focus-visible {
+                border: 1px solid #000000  !important;
+                outline: none;
+            }
+
+            }
+    }
+    .signup-button{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button{
+            background-color: #50457f;
+            border-radius: 20px;
+            max-width: 100%;
+            color: #ffffff;
+            &:hover{
+                background-color: #280cd1;
+                color: #000000;
+            }
+        }
+    }
+}
+.modal-wrapper{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000eb;
+  z-index: 2000;
+
+  
+  .my-modal{
+    margin: auto !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+
+    .modal-close{
+        cursor: pointer;
+        i{
+            color: #000000;
+            &:hover{
+                color: #f80404;
+            }
+        }
+    }
+  }
+}
+.webtoon-ads{
+    max-width: 210px;
+    .img-wrapper{
+        flex-wrap: wrap;
+        overflow: hidden;
+        border-radius: 5px;
+        img{
+            object-fit: cover;
+        }
+    }
+}
+.webtoon-card{
+    height: fit-content;
+    max-width: 155px;
+    background-color: #211c2d;
+    padding: 12px;
+    border-radius: 5px;
+        .img-wrapper{
+            height: 131px;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            margin-bottom: 9px;
+            border-radius: 5px;
+            position: relative;
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+            .update{
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                bottom: 0;
+                width: 100%;
+                background: #970000;
+                text-align: center;
+                color: white;
+            }
+            
+        }
+        .card-body2{  
+            font-size: 15px;
+            font-style: normal;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+            h3{
+                font-size: 10px;
+                color: rgb(255, 255, 255);
+                font-weight: 600;
+                max-width: 100px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+           
+            }
+     
+            .card-body3{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    font-size: 11px;
+                    max-width: 75px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: block;
+                    color: rgb(255 255 255 / 59%)
+                }
+                
+            }
+            .card-body4{
+                display: flex;
+                justify-content: space-between;
+
+                span{
+                    font-size: 11px;
+                    width: 100%;
+                    color: rgb(255 255 255 / 70%)
+                }     
+                div{
+                    height: fit-content;
+                    line-height: 1;
+                }    
+            }    
+        }
+}
+.comic-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .comic-picture{   
+        max-width: 50%;
+        text-align: center;
+        display: flex;
+        gap: 5px; 
+        flex-wrap: wrap;
+        .webtoon-card{
+            max-width: 650px;
+            .img-wrapper{
+                max-height: 315px;
+                min-height: 315px;
+                aspect-ratio: 0;
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .comic-details{
+        width: 46%;
+        display: flex;
+        border-radius: 3px;
+        flex-wrap: wrap;
+        padding: 10px;
+        padding-top: 0;
+        
+        .comic-header{
+            width: 100%;
+            border-bottom: 1px solid #ffffff17;
+            height: fit-content;
+            padding: 12px;
+            .title{
+                font-size: 20px;
+                font-weight: bolder;
+            }
+            .header-details{
+                color: #eccf7691;
+                display: flex;
+                margin-top: 10px;
+                gap: 30px;
+                img{
+                    height: 20px;
+                    width: 20px;
+                }
+                .writer{
+                    color: rgb(236 207 129 / 86%);
+                }
+                .serial{
+                    color: rgb(236 207 129 / 86%);
+                    
+                }
+            }
+        }
+        .comic-body{
+            margin-top: 0px;
+            height: fit-content;
+            padding: 10px;
+            border-bottom: 1px solid #ffffff17;
+            color: #eccf7691;
+        }
+        .comic-footer{
+            width: 100%;
+            
+            height: fit-content;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .comic-footer2{
+                width: 100%;
+                display: flex;
+            }
+            .genre-details{
+                min-width: 50%;
+                max-width: 50%;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                margin-bottom: 10px;
+                .title{
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+                .genre{
+                    padding: 5px;
+                    background-color: #3f2797;
+                    border-radius: 5px;
+                   
+                    color: rgba(255, 255, 255, 0.9098039216);
+                    font-size: 12px;
+                }
+            }
+            .genre-rating{
+                text-align: right;
+                min-width: 50%;
+                max-width: 50%;
+                i{
+                    color: #aa841c;
+                }
+            }
+            button{
+                min-width: 49%;
+                padding: 5px;
+                background-color: #211c2d;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                color: white;
+            }
+        
+        }
+    }
+
+}
+.comic-episode{
+    margin-top: 10px;
+    width: 100%;
+    justify-content:space-between;
+    display: flex;
+    .serial-number{
+        display: flex;
+        gap: 30px;
+        span{
+            font-size: 17px;
+        }
+    }
+    img{
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+    }
+}
+.list-episode-card{
+    width: 100%;
+    font-size: 18px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    
+    .episode-card{
+        background-color: #211c2d;
+        padding: 20px;
+        border-radius: 10px;
+        width: 49.8%;
+        margin-bottom: 5px;
+        
+    }
+    .title{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .details{
+        display: flex;
+        justify-content: space-between;
+        i{
+            color: #aa841c;
+        }
+    }
+}
+.modal-wrapper{
+    
+    .my-modal{
+        max-width: 40%;
+        min-width: 325px;
+    }
+    .modal-details{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        background: #130e21;
+        padding: 20px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+        border-radius: 5px;
+        flex-wrap: wrap;
+        gap: 4px;
+        border: 1px solid #251c3d;
+        .modal-details-head{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            .modal-close{
+                background: #211c2d;
+                width: 37px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                    i{
+                        color: #ffffff;
+                        &:hover{
+                            color: #be4747;
+                        }
+                    }
+            }
+            span{
+                font-size: large;
+                font-style: normal;
+                font-weight: bold;
+                color: #ffffff;
+            }
+        }
+        button{
+            width: 60px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: #211c2d;
+            color: white;
+        }
+        
+    }
+}
+.search-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .search-icon{
+        width: fit-content;
+        margin-bottom: 15px;
+        .company-icon{
+            display: flex;
+            justify-content: center;
+            background-color: #211c2d;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            align-items: center;
+            .icon-wrapper{
+                background-color: #50457f;
+                height: 30px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+            }
+            button{
+                width: 50px;
+                height: 30px;
+                border-radius: 10px;
+                background-color: rgb(172, 37, 37);
+                color: white;
+                font-size: 15px;
+            }
+            img{
+                height: 25px;
+                width: 25px;
+                padding: 2px;
+            }
+        }
+    }
+    .search-body{
+        width: 100%;
+        background-color: #211c2d;
+        padding: 15px;
+        border-radius: 10px;
+
+        .search-choices{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            .right-choices{
+                display: flex;
+                gap: 10px;
+                width: 95%;
+                input{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                button{
+                    width: 50px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: rgb(172, 37, 37);
+                    color: white;
+                    font-size: 15px;
+                }
+                .button-choices{
+                    width: 50px;
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: #50457f;
+                    color: white;
+                    font-size: 15px;
+                }
+                span{
+                    cursor: pointer;
+                    color: #ecc760a8;
+                }
+            }
+        }
+    }
+
+
+
+}
+.webtoon-read-section{
+    width: 55%;
+    height: fit-content;
+    img{
+        // margin-bottom: 200px;
+    }
+}
+.comic-controller{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 300;
+    display: flex;
+    width: 80px;
+    height: 300px;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    button{
+        border-radius: 20px;
+        height: 50px;
+        width: 50px;
+        color: #967d38;
+        background-color: #211c2d;
+        i{
+           font-size: 25px;
+           color: #967d38;
+        }
+    }
+}
+
+.comic-controller-2{
+    position: fixed;
+    bottom: 0;
+    background-color: #211c2d;
+    right: 25%;
+    z-index: 300;
+    display: flex;
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    span{
+        cursor: pointer;
+    }
+}
+.card-icon{
+    display: flex;
+    position: absolute;
+    padding: 3px;
+    background-color: #130e21;
+    border-radius: 5px;
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}
