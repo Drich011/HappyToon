@@ -1,0 +1,693 @@
+
+@media (max-width:1319px) {
+
+    body{
+        .webtoon-body{
+            .webtoon-body2{
+                .bookmarks-section{
+                    .bookmarks{
+                        .bookmarks-card{
+                            .webtoon-card{
+                                width: calc(100% / 3 - 4px);
+                                .img-wrapper{
+                                    max-width: 100%;
+                                    height: 223px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+@media (max-width:1314px) {
+
+    .webtoon-ads{
+        // .img-wrapper{
+        //     width: calc(100% / 4);
+        // }
+        width: calc(100% / 3 - 4px);
+        max-width: unset;
+    }
+}
+@media (max-width:1280px) {
+    .search-bar{
+        display: none;
+    }
+    .mobile-nav{
+        display: flex;
+    }
+    header {
+        .container {
+            .nav-bar {
+                nav{
+                    position: absolute;
+                    height: fit-content;
+                    background-image: linear-gradient(360deg, #1a1a1a, #0d0d0d);
+                    left: 0;
+                    bottom: -304px;
+                    display: none;
+                    flex-direction: column;
+                    &.active{
+                        display: flex;
+                        animation: animate__fadeIn;
+
+                    }
+                    a{
+                        width: 100%;
+                        text-align: left;
+                        padding: 10px 20px;
+                        &:not(:last-child){
+                            border-bottom: 1px solid #c3ab7014;
+                        }
+                    }
+                }
+            }
+        }
+    }
+body{
+    .webtoon-body{
+        .webtoon-body2{
+            .sort-choices{
+                .sort-choices-item{
+                    display: none;
+                    &.a{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        background-color: #42385f00;
+                        .webtoon-card{
+                            min-width: none;
+                            width: calc(100% / 6 - 5px);
+                            .img-wrapper{
+                                height: 220px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .sort-choices-complete{
+                .sort-choices-item{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    background-color: #42385f00;
+                    .webtoon-card{
+                        min-width: none;
+                        width: calc(100% / 6 - 5px);
+                        .img-wrapper{
+                            height: 220px;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .button-choices{
+                .sort-choices-item{
+                    &.a{
+                        background-color: #42385f00;
+                    }
+                }
+            }
+            .button-choices2{
+                .sort-choices-item{
+                    &.a{
+                        background-color: #42385f00;
+                    }
+                }
+            }
+        }
+    }
+}
+
+   
+
+    // .modal-wrapper{
+    
+    //     .my-modal{
+    //     max-width: 50%;
+    //     min-width: 325px
+    //     }
+    //     .modal-details{
+    //         max-width: 100%;
+    //         display: flex;
+    //         justify-content: center;
+    //         background: #130e21;
+    //         padding: 20px;
+    //         box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+    //         border-radius: 5px;
+    //         flex-wrap: wrap;
+    //         gap: 4px;
+    //         border: 1px solid #251c3d;
+    //         .modal-details-head{
+    //             width: 100%;
+    //             display: flex;
+    //             justify-content: space-between;
+    //             margin-bottom: 15px;
+    //             .modal-close{
+    //                 background: #211c2d;
+    //                 width: 37px;
+    //                 display: flex;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 border-radius: 10px;
+    //                     i{
+    //                         color: #ffffff;
+    //                         &:hover{
+    //                             color: #be4747;
+    //                         }
+    //                     }
+    //             }
+    //             span{
+    //                 font-size: large;
+    //                 font-style: normal;
+    //                 font-weight: bold;
+    //                 color: #ffffff;
+    //             }
+    //         }
+            
+    //         button{
+    //             width: 60px;
+    //             border-radius: 10px;
+    //             font-size: 20px;
+    //             background-color: #211c2d;
+    //             color: white;
+    //         }
+            
+    //     }
+    // }
+
+
+}
+
+@media(max-width:1199px){
+    .comic-details {
+        .comic-details {
+            .comic-footer  {
+                button{
+                    max-width: 49%;
+                }
+            }
+        }
+    }
+    body{
+        .webtoon-body{
+            .webtoon-body2{
+                .sort-choices{
+                    .sort-choices-item{
+                        &.a{
+                            .webtoon-card{
+                                min-width: none;
+                                width: calc(100% / 5 - 5px);
+                                .img-wrapper{
+                                    height: 220px;
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sort-choices-complete{
+                    .sort-choices-item{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        background-color: #42385f00;
+                        .webtoon-card{
+                            min-width: none;
+                            width: calc(100% / 5 - 5px);
+                            .img-wrapper{
+                                height: 220px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .bookmarks-section{
+                    .bookmarks{
+                        .bookmarks-card{
+                            .webtoon-card{
+                                width: calc(100% / 2 - 5px);
+                                .img-wrapper{
+                                    max-width: 100%;
+                                    height: 230px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media(max-width:991px){
+    .comic-details{
+        display: contents;
+        .comic-picture{
+            max-width: unset;
+        }
+        .comic-details{
+            width: unset;
+            margin-left: 0px;
+        }
+    }
+    body{
+    .webtoon-body{
+        .webtoon-body2{
+            .sort-choices{
+                .sort-choices-item{
+                    &.a{
+                        .webtoon-card{
+                            min-width: none;
+                            width: calc(100% / 4 - 5px);
+                            .img-wrapper{
+                                max-width: 100%;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+            .sort-choices-complete{
+                .sort-choices-item{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    background-color: #42385f00;
+                    .webtoon-card{
+                        min-width: none;
+                        width: calc(100% / 4 - 5px);
+                        .img-wrapper{
+                            max-width: 100%;
+                           
+                        }
+                    }
+                }
+            }
+            .bookmarks-section{
+                .bookmarks{
+                    .bookmarks-card{
+                        .webtoon-card{
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 180px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+    .webtoon-read-section {
+        width: 100%;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+
+    
+}
+@media(max-width:767px){
+    .list-episode-card{
+        .episode-card{
+            .title{
+                font-size: 12px;
+            }
+            .details{
+                font-size: 12px;
+            }    
+        }   
+    }
+    .bookmarks-section{
+        flex-wrap: wrap;
+    }
+
+body{
+    .webtoon-body{
+        .webtoon-body2{
+            .sort-choices{
+                .sort-choices-item{
+                    &.a{
+                        .webtoon-card{
+                            min-width: none;
+                            width: calc(100% / 4 - -39px);
+                            .img-wrapper{
+                                max-width: 100%;
+                             
+                            }
+                        }
+                    }
+                }
+            }
+            .sort-choices-complete{
+                .sort-choices-item{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    background-color: #42385f00;
+                    .webtoon-card{
+                        min-width: none;
+                        width: calc(100% / 4 - -39px);
+                        .img-wrapper{
+                            max-width: 100%;
+                         
+                        }
+                    }
+                }
+            }
+            .bookmarks-section{
+                .bookmarks{
+                    .bookmarks-card{
+                        .webtoon-card{
+                            width: calc(100% / 3 - 4px);
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 190px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+}
+@media(max-width:795px){
+    .modal-wrapper{
+        .my-modal{
+            .modal-details{
+                .webtoon-card{
+                    min-width: unset;
+                    width: calc(100% / 2 - 2px);
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:547px){
+    body{
+    .webtoon-body{
+        .webtoon-body2{
+            .sort-choices{
+                .sort-choices-item{
+                    &.a{
+                        .webtoon-card{
+                            max-width: unset;
+                            width: calc(100% / 2 - 3px);
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 259px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sort-choices-complete{
+                .sort-choices-item{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    background-color: #42385f00;
+                    .webtoon-card{
+                        max-width: unset;
+                        width: calc(100% / 2 - 3px);
+                        .img-wrapper{
+                            max-width: 100%;
+                            height: 259px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+
+@media(max-width:536px){
+    .list-episode-card{
+        .episode-card{
+            .title{
+                font-size: 12px;
+            }
+            .details{
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                /* flex-wrap: wrap; */
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        }
+        
+    }
+}
+@media(max-width:514px){
+   .bookmarks-section{
+    .bookmarks{
+        .bookmarks-card{
+            .webtoon-card{
+                max-width: 100%;
+                .img-wrapper{
+                    height: 100%;
+                }
+            }
+        }
+    }
+   }
+}
+
+@media (max-width:504px) {
+    body{
+        .webtoon-body{
+            .webtoon-body2{
+                .bookmarks-section{
+                    .bookmarks{
+                        .bookmarks-card{
+                            .webtoon-card{
+                                width: calc(100% / 2 - 3px);
+                                .img-wrapper{
+                                    max-width: 100%;
+                                    height: 253px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:500px) {
+    .webtoon-ads{
+        width: calc(100% / 2 - 3px);
+    }
+}
+@media(max-width:450px){
+    .comic-details{
+        .comic-details{
+            button{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media(max-width:425px){
+
+    body{
+    .webtoon-body{
+        .webtoon-body2{
+            .webtoon-choices{
+                flex-wrap: wrap;
+                gap: 13px;
+            }
+        }
+    }
+    }
+    .list-episode-card{
+        .episode-card{
+            width: 100%;
+            .title{
+                font-size: 12px;
+            }
+            .details{
+                justify-content: space-between;
+                flex-direction: unset;
+                font-size: 12px;
+                display: flex;
+                 flex-wrap: wrap; 
+                
+               
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+@media(max-width:382px){
+    .comic-details{
+        .comic-details{
+            .comic-footer2{
+                flex-direction: column;
+                .genre-details{
+                    margin-bottom: 4px;
+                    max-width: 100%;
+                }
+                .genre-rating{
+                    text-align: unset;
+                    margin-bottom: 5px;
+                }
+            }
+            button{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width:375px){
+    header{
+        .container{
+            .nav-bar{
+                .logo-wrapper{
+                    height: 100%;
+                    width: 200px;
+                    img{
+                        width: 100%;
+                    }
+                } 
+            } 
+        }
+    }
+    body{
+    .webtoon-body{
+        .webtoon-body2{
+            .webtoon-choices{
+                flex-wrap: wrap;
+                gap: 13px;
+            }
+            .sort-choices{
+                .sort-choices-item{
+                    &.a{
+                        .webtoon-card{
+                            max-width: unset;
+                            width: calc(100% / 2 - 3px);
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 202px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sort-choices-complete{
+                .sort-choices-item{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    background-color: #42385f00;
+                    .webtoon-card{
+                        max-width: unset;
+                        width: calc(100% / 2 - 3px);
+                        .img-wrapper{
+                            max-width: 100%;
+                            height: 202px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+
+}
+@media(max-width:354px){
+    body{
+    .webtoon-body{
+        .webtoon-body2{
+            .webtoon-choices{
+                flex-wrap: wrap;
+                gap: 13px;
+            }
+            .sort-choices{
+                .sort-choices-item{
+                    &.a{
+                        .webtoon-card{
+                            max-width: unset;
+                            min-width: unset;
+                            width: calc(100% / 2 - 3px);
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 174px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+
+}
+
+@media(max-width:344px){
+    body{
+        .webtoon-body{
+            .webtoon-body2{
+                .bookmarks-section{
+                    .bookmarks{
+                        .bookmarks-card{
+                            .webtoon-card{
+                                max-width: unset;
+                                min-width: unset;
+                                width: calc(100% / 2 - 3px);
+                                .img-wrapper{
+                                    max-width: 100%;
+                                    height: 170px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sort-choices-complete{
+                    .sort-choices-item{
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        background-color: #42385f00;
+                        .webtoon-card{
+                            max-width: unset;
+                            min-width: unset;
+                            width: calc(50% - 3px);
+                            .img-wrapper{
+                                max-width: 100%;
+                                height: 163px;  
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

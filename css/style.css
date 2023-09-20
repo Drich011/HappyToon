@@ -1,0 +1,2488 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"), url(fonts/NotoSans-Light.eot);
+  src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"), url(fonts/NotoSans-Light.woff2) format("woff2"), url(fonts/NotoSans-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"), url(fonts/NotoSans-Regular.eot);
+  src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"), url(fonts/NotoSans-Regular.woff2) format("woff2"), url(fonts/NotoSans-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"), url(fonts/NotoSans-Medium.eot);
+  src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"), url(fonts/NotoSans-Medium.woff2) format("woff2"), url(fonts/NotoSans-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url(fonts/NotoSans-Bold.eot);
+  src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"), url(fonts/NotoSans-Bold.woff2) format("woff2"), url(fonts/NotoSans-Bold.woff) format("woff");
+}
+html, body {
+  background-color: #0d0d0d;
+  color: #ECCF81;
+  width: 100%;
+  margin: 0;
+  line-height: 1.5;
+  position: relative;
+  font-size: 15px;
+  scroll-behavior: smooth;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #000000;
+  border-left: solid 1px rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ECCF81, #9e884b);
+  border: solid 2px #000000;
+  border-radius: 5px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.is-unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+upported by Chrome, Edge, Opera and Firefox */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+hr {
+  border: 1px solid #797979;
+  margin: 1.425rem 0;
+}
+
+button,
+input[type=submit],
+input:not([type=checkbox], [type=radio]) {
+  font-family: "Roboto", sans-serif;
+  border: unset;
+  height: 39px;
+}
+
+button,
+input[type=submit] {
+  cursor: pointer;
+  width: 100%;
+  max-width: 240px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  color: #ECCF81;
+  transition: filter 0.3s ease-in-out;
+  filter: brightness(1) !important;
+}
+a:hover {
+  filter: brightness(1.5) !important;
+  color: #ECCF81;
+  text-decoration: none;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+}
+
+button:active {
+  outline: unset !important;
+  border: unset !important;
+}
+button:focus {
+  outline: unset !important;
+  border: unset !important;
+}
+button:focus-visible {
+  outline: unset !important;
+  border: unset !important;
+}
+
+.btn {
+  height: 39px;
+  padding: 4px 10px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:active {
+  outline: unset !important;
+  border: unset !important;
+}
+.btn:focus {
+  outline: unset !important;
+  border: unset !important;
+}
+.btn:focus-visible {
+  outline: unset !important;
+  border: unset !important;
+}
+.btn.btn-primary {
+  background: linear-gradient(0deg, #a67c00 0%, #ffdc73 100%);
+  border: unset;
+  color: #000 !important;
+}
+.btn.btn-primary:active {
+  background: linear-gradient(0deg, #a67c00 0%, #ffdc73 100%) !important;
+  border: unset;
+  color: #000 !important;
+}
+.btn.btn-primary:focus {
+  box-shadow: unset !important;
+}
+.btn.btn-success {
+  background: linear-gradient(0deg, #0e282b 0%, #004e46 100%);
+  border: unset;
+  color: #ad8b40 !important;
+}
+.btn.btn-success:active {
+  background: linear-gradient(0deg, #0e282b 0%, #004e46 100%) !important;
+  border: unset;
+  color: #ad8b40 !important;
+}
+.btn.btn-success:focus {
+  box-shadow: unset !important;
+}
+.btn.btn-danger {
+  background: linear-gradient(0deg, #4c040b 0%, #bc2130 100%);
+  border: unset;
+  color: #a67c00;
+}
+.btn.btn-danger:active {
+  background: linear-gradient(0deg, #4c040b 0%, #bc2130 100%) !important;
+  border: unset;
+  color: #a67c00;
+}
+.btn.btn-danger:focus {
+  box-shadow: unset !important;
+}
+.btn.btn-secondary {
+  background-image: linear-gradient(360deg, #574d34, #ffffff);
+  border: unset;
+  color: #a67c00;
+}
+.btn.btn-secondary:active {
+  background: linear-gradient(0deg, #1e1e1e 0%, #3e3e3e 100%) !important;
+  border: unset;
+  color: #a67c00;
+}
+.btn.btn-secondary:focus {
+  box-shadow: unset !important;
+  color: #a67c00;
+}
+.btn.btn-outline-primary {
+  border: 1px solid #a67c00;
+  color: #a67c00;
+}
+.btn.btn-outline-primary:hover {
+  background: linear-gradient(0deg, #a67c00 0%, #ffdc73 100%);
+  color: #000;
+}
+.btn.btn-outline-primary:active {
+  background-color: unset !important;
+  border: 1px solid #a67c00 !important;
+  color: #a67c00 !important;
+}
+.btn.btn-outline-primary:focus {
+  box-shadow: unset !important;
+}
+
+.form-control {
+  background-color: #000000;
+  border: 1px solid rgba(236, 207, 129, 0.1803921569) !important;
+  color: #eccf81;
+}
+.form-control:focus {
+  color: #ffdc73;
+  background-color: #0a0a0a !important;
+  box-shadow: 0 0 0 0.2rem rgba(209, 146, 50, 0.1490196078);
+}
+
+.form-group.form-icon {
+  position: relative;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(236, 207, 129, 0.1803921569) !important;
+}
+.form-group.form-icon .form-control {
+  border: unset !important;
+  background-color: unset;
+  width: calc(100% - 43px) !important;
+}
+.form-group.form-icon .form-control:focus {
+  color: #ffdc73;
+  background-color: #0a0a0a !important;
+  box-shadow: unset;
+}
+.form-group.form-icon .icon {
+  position: relative;
+  height: 100%;
+  width: 43px;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control[readonly] {
+  background-color: #0d0b18;
+  border: 1px solid rgba(236, 207, 129, 0.1803921569) !important;
+  color: #6d5200;
+}
+
+::-moz-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #4b4b4b !important;
+  opacity: 1; /* Firefox */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #4b4b4b !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet 
+Explorer 10-11 */
+  color: #a67c00 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #a67c00 !important;
+}
+
+.carousel-caption {
+  z-index: 10000 !important;
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+i {
+  color: #c72f5f;
+}
+
+.webtoon-body {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+}
+.webtoon-body .webtoon-body2 {
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.webtoon-body .webtoon-body2.width-fit {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+.webtoon-body .webtoon-body2 .webtoon-details {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(26, 26, 26);
+  height: 46px;
+  border-radius: 7px;
+}
+.webtoon-body .webtoon-body2 .webtoon-details button {
+  height: 25px;
+  width: 60px;
+  border-radius: 5px;
+  color: #000000;
+  border-color: #967d38;
+  background-color: #3ea3a1;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -15px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices {
+  display: flex;
+  gap: 5px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices button {
+  height: 30px;
+  width: 60px;
+  color: #000000;
+  background-color: #459e9c;
+  border-radius: 5px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 button {
+  height: 30px;
+  width: 60px;
+  color: #ECCF81;
+  background-color: #211c2d;
+  border-radius: 5px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:checked + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #ECCF81;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:checked + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:checked + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #3ea3a1;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #ECCF81;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+.webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #F87DA9;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete {
+  margin-top: 10px;
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item button {
+  width: 94%;
+  height: 45px;
+  background-color: #11101a;
+  color: #967d38;
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+  width: calc(16.6666666667% - 36px);
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+  height: 201px;
+  max-width: 100%;
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .a {
+  background-color: #203535;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .sort-choices-complete .a button {
+  background-color: #7966ad;
+  color: white;
+}
+.webtoon-body .webtoon-body2 .sort-choices {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+}
+.webtoon-body .webtoon-body2 .sort-choices .sort-choices-item {
+  width: 12.5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .sort-choices .sort-choices-item button {
+  width: 94%;
+  height: 45px;
+  background-color: #11101a;
+  color: #967d38;
+}
+.webtoon-body .webtoon-body2 .sort-choices .a {
+  background-color: #203535;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .sort-choices .a button {
+  background-color: #7966ad;
+  color: white;
+}
+.webtoon-body .webtoon-body2 .button-choices2 {
+  width: 100%;
+  display: none;
+  justify-content: space-between;
+  margin-bottom: -6px;
+}
+.webtoon-body .webtoon-body2 .button-choices2 .sort-choices-item {
+  width: 12.5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .button-choices2 .sort-choices-item button {
+  width: 94%;
+  height: 45px;
+  background-color: #1a1a1a;
+  color: #967d38;
+}
+.webtoon-body .webtoon-body2 .button-choices2 button {
+  width: 12%;
+  height: 45px;
+  background-color: #11101a;
+  color: #967d38;
+  border-radius: 5px;
+}
+.webtoon-body .webtoon-body2 .button-choices2 .a {
+  background-color: #203535;
+  padding-top: 5px;
+}
+.webtoon-body .webtoon-body2 .button-choices2 .a button {
+  background-image: linear-gradient(360deg, #1a1a1a, #0d0d0d);
+  color: white;
+}
+.webtoon-body .webtoon-body2 .active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webtoon-body .webtoon-body2 .login {
+  min-width: 30%;
+  display: block;
+  justify-content: center;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+  border-radius: 5px;
+}
+.webtoon-body .webtoon-body2 .login .login-details {
+  margin-bottom: 5px;
+}
+.webtoon-body .webtoon-body2 .login .login-details input {
+  width: 100%;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #ECCF81;
+}
+.webtoon-body .webtoon-body2 .login .login-details input:focus-visible {
+  outline: none;
+}
+.webtoon-body .webtoon-body2 .login .login-button {
+  display: flex;
+  justify-content: space-between;
+}
+.webtoon-body .webtoon-body2 .login .login-button button {
+  background-color: rgba(62, 163, 161, 0);
+  border: 1px solid #3ea3a1;
+  border-radius: 20px;
+  width: 49%;
+  color: #ffffff;
+}
+.webtoon-body .webtoon-body2 .login .login-button button:hover {
+  background-color: #3ea3a1;
+  color: #ffffff;
+}
+.webtoon-body .webtoon-body2 .login .login-button button:hover:not(:last-child) {
+  background-color: rgba(62, 163, 161, 0);
+}
+.webtoon-body .webtoon-body2 .login .login-button button:not(:first-child) {
+  background-color: #3ea3a1;
+}
+.webtoon-body .webtoon-body2 .member-info {
+  flex-wrap: wrap;
+  background-color: #1a1a1a;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px;
+  position: relative;
+}
+.webtoon-body .webtoon-body2 .member-info span {
+  margin-bottom: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+.webtoon-body .webtoon-body2 .bookmarks-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.webtoon-body .webtoon-body2 .bookmarks-section.width-fit {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+.webtoon-body .webtoon-body2 .bookmarks {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card span {
+  width: 100%;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card .bookmarks-left {
+  width: 100%;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card .bookmarks-left i {
+  color: #000000;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card .bookmarks-left button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #3ea3a1;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  text-align: end;
+  float: right;
+}
+.webtoon-body .webtoon-body2 .bookmarks .bookmarks-card .bookmarks-title {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 3px;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-direction: column;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-left {
+  width: 50%;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-left i {
+  color: #000000;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-right {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-right .bookmarks-title {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 3px;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #3ea3a1;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+  text-align: end;
+  float: right;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  flex-wrap: wrap;
+}
+.webtoon-body .webtoon-body2 .bookmarks-header .bookmarks-title span {
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.signup {
+  min-width: 30%;
+  display: block;
+  justify-content: center;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+  border-radius: 5px;
+}
+.signup .signup-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.signup .signup-head span {
+  font-size: large;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+}
+.signup .login-details {
+  margin-bottom: 5px;
+}
+.signup .login-details input {
+  width: 100%;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #c8b06f;
+}
+.signup .login-details input:focus-visible {
+  border: 1px solid #000000 !important;
+  outline: none;
+}
+.signup .signup-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.signup .signup-button button {
+  background-color: #3ea3a1;
+  border-radius: 20px;
+  max-width: 100%;
+  color: #000000;
+}
+.signup .signup-button button:hover {
+  color: #000000;
+}
+
+.change-info {
+  min-width: 30%;
+  display: block;
+  justify-content: center;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+  border-radius: 5px;
+}
+.change-info .change-info-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.change-info .change-info-head span {
+  font-size: large;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+}
+.change-info .login-details {
+  margin-bottom: 5px;
+}
+.change-info .login-details input {
+  width: 100%;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #c8b06f;
+}
+.change-info .login-details input:focus-visible {
+  border: 1px solid #000000 !important;
+  outline: none;
+}
+.change-info .change-info-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.change-info .change-info-button button {
+  background-color: #3ea3a1;
+  border-radius: 20px;
+  max-width: 100%;
+  color: #000000;
+}
+.change-info .change-info-button button:hover {
+  color: #000000;
+}
+
+.modal-wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9215686275);
+  z-index: 2000;
+}
+.modal-wrapper .my-modal {
+  margin: auto !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+}
+.modal-wrapper .my-modal .modal-close {
+  cursor: pointer;
+}
+.modal-wrapper .my-modal .modal-close i {
+  color: #000000;
+}
+.modal-wrapper .my-modal .modal-close i:hover {
+  color: #f80404;
+}
+
+.modal-message {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9215686275);
+  z-index: 2000;
+}
+.modal-message .my-modal-message {
+  margin: auto !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
+  min-width: 325px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 77%;
+}
+.modal-message .my-modal-message .modal-close {
+  cursor: pointer;
+}
+.modal-message .my-modal-message .modal-close i {
+  color: #000000;
+}
+.modal-message .my-modal-message .modal-close i:hover {
+  color: #f80404;
+}
+.modal-message .my-modal-message .modal-details {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #0d0d0d;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 4px;
+  border: 1px solid #4f4c47;
+}
+.modal-message .my-modal-message .modal-details .modal-details-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.modal-message .my-modal-message .modal-details .modal-details-head .modal-close {
+  background: #181818;
+  width: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.modal-message .my-modal-message .modal-details .modal-details-head .modal-close i {
+  color: #ffffff;
+}
+.modal-message .my-modal-message .modal-details .modal-details-head .modal-close i:hover {
+  color: #be4747;
+}
+.modal-message .my-modal-message .modal-details .modal-details-head span {
+  font-size: large;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+}
+.modal-message .my-modal-message .modal-details .modal-details-body {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+}
+.modal-message .my-modal-message .modal-details .modal-details-body textarea {
+  width: 100%;
+  outline: none;
+  background: #000000;
+  color: #b69f73;
+}
+.modal-message .my-modal-message .modal-details .modal-details-body button {
+  margin-top: 10px;
+  align-items: flex-end;
+  border-radius: 20px;
+  width: 100%;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+  color: #ffffff;
+}
+
+.webtoon-ads {
+  max-width: 210px;
+}
+.webtoon-ads .img-wrapper {
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.webtoon-ads .img-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.webtoon-card {
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  min-width: 155px;
+  background-color: #1a1a1a;
+  padding: 12px;
+  border-radius: 5px;
+}
+.webtoon-card .img-wrapper {
+  height: 163px;
+  overflow: hidden;
+  margin-bottom: 9px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 132px;
+}
+.webtoon-card .img-wrapper img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.webtoon-card .img-wrapper .update {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  background: #970000;
+  text-align: center;
+  color: white;
+}
+.webtoon-card .card-body2 {
+  font-size: 15px;
+  font-style: normal;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.webtoon-card .card-body2 h3 {
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: start;
+}
+.webtoon-card .card-body2 .card-body3 {
+  display: flex;
+  justify-content: space-between;
+}
+.webtoon-card .card-body2 .card-body3 span {
+  font-size: 11px;
+  max-width: 75px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  color: rgba(255, 255, 255, 0.59);
+}
+.webtoon-card .card-body2 .card-body4 {
+  display: flex;
+  justify-content: space-between;
+}
+.webtoon-card .card-body2 .card-body4 span {
+  font-size: 11px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.webtoon-card .card-body2 .card-body4 div {
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 1;
+}
+
+.comic-details {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.comic-details .comic-picture {
+  max-width: 50%;
+  text-align: center;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.comic-details .comic-picture .webtoon-card {
+  max-width: 650px;
+}
+.comic-details .comic-picture .webtoon-card .img-wrapper {
+  max-height: 315px;
+  min-height: 360px;
+  aspect-ratio: 0;
+  margin-bottom: 0px;
+  max-width: 297px;
+}
+.comic-details .comic-details {
+  width: 73%;
+  display: flex;
+  border-radius: 3px;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-top: 0;
+  margin-left: 2%;
+  flex-direction: column;
+}
+.comic-details .comic-details .comic-header {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0901960784);
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px;
+}
+.comic-details .comic-details .comic-header .title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.comic-details .comic-details .comic-header .header-details {
+  color: rgba(236, 207, 118, 0.568627451);
+  display: flex;
+  margin-top: 10px;
+  gap: 30px;
+}
+.comic-details .comic-details .comic-header .header-details img {
+  height: 20px;
+  width: 20px;
+}
+.comic-details .comic-details .comic-header .header-details .writer {
+  color: rgba(236, 207, 129, 0.86);
+}
+.comic-details .comic-details .comic-header .header-details .serial {
+  color: rgba(236, 207, 129, 0.86);
+}
+.comic-details .comic-details .comic-body {
+  margin-top: 0px;
+  height: 157px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.0901960784);
+  color: rgba(236, 207, 118, 0.568627451);
+}
+.comic-details .comic-details .comic-body span {
+  display: block;
+  max-width: 100%;
+  text-align: justify;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.59);
+}
+.comic-details .comic-details .comic-footer {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.comic-details .comic-details .comic-footer .comic-footer2 {
+  width: 100%;
+  display: flex;
+}
+.comic-details .comic-details .comic-footer .genre-details {
+  min-width: 50%;
+  max-width: 50%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.comic-details .comic-details .comic-footer .genre-details .title {
+  font-size: 15px;
+  font-weight: 400;
+}
+.comic-details .comic-details .comic-footer .genre-details .genre {
+  padding: 5px;
+  background-color: #3ea3a1;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.91);
+  font-size: 12px;
+  width: 56px;
+  text-align: center;
+  max-height: 28px;
+  white-space: nowrap;
+}
+.comic-details .comic-details .comic-footer .genre-rating {
+  text-align: right;
+  min-width: 50%;
+  max-width: 50%;
+}
+.comic-details .comic-details .comic-footer .genre-rating i {
+  color: #aa841c;
+}
+.comic-details .comic-details .comic-footer button {
+  min-width: 49%;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: white;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+}
+
+.comic-episode {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.comic-episode .serial-number {
+  display: flex;
+  gap: 30px;
+}
+.comic-episode .serial-number span {
+  font-size: 17px;
+}
+.comic-episode i {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #aa841c;
+  font-size: 30px;
+}
+
+.list-episode-card {
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-episode-card .episode-card {
+  padding: 4px;
+  border-radius: 10px;
+  width: 49.9%;
+  margin-bottom: 1px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-image: linear-gradient(360deg, #1a1a1a, #141414);
+}
+.list-episode-card .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.list-episode-card .details {
+  display: flex;
+  justify-content: space-between;
+}
+.list-episode-card .details i {
+  color: #aa841c;
+}
+.list-episode-card .details span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7098039216);
+  margin-left: 10px;
+}
+.list-episode-card .details div {
+  margin-right: 10px;
+}
+
+.modal-wrapper .my-modal {
+  max-width: 50%;
+  min-width: 325px;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 77%;
+}
+.modal-wrapper .modal-details {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #0d0d0d;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1098039216);
+  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 4px;
+  border: 1px solid #3b3933;
+}
+.modal-wrapper .modal-details .last-title {
+  background: #040404;
+  color: #ffffef;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding: 6px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: bold;
+}
+.modal-wrapper .modal-details .modal-details-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.modal-wrapper .modal-details .modal-details-head .modal-close {
+  background: #211c2d;
+  width: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.modal-wrapper .modal-details .modal-details-head .modal-close i {
+  color: #ffffff;
+}
+.modal-wrapper .modal-details .modal-details-head .modal-close i:hover {
+  color: #be4747;
+}
+.modal-wrapper .modal-details .modal-details-head span {
+  font-size: large;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+}
+.modal-wrapper .modal-details .modal-details-body {
+  overflow: scroll;
+  overflow-x: hidden;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-height: 551px;
+}
+.modal-wrapper .modal-details button {
+  width: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #040404;
+  color: white;
+}
+
+.search-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.search-section .search-icon {
+  display: flex;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.search-section .search-icon .company-icon {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-section .search-icon .company-icon .icon-wrapper {
+  background-color: #3ea3a1;
+  height: 60px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.search-section .search-icon .company-icon button {
+  width: 50px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgb(172, 37, 37);
+  color: white;
+  font-size: 15px;
+}
+.search-section .search-icon .company-icon img {
+  height: 50px;
+  width: 50px;
+  padding: 2px;
+  border-radius: 100px;
+}
+.search-section .search-body {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+}
+.search-section .search-body .search-choices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.search-section .search-body .search-choices .right-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 95%;
+}
+.search-section .search-body .search-choices .right-choices input {
+  width: 100%;
+  border-radius: 10px;
+}
+.search-section .search-body .search-choices .right-choices button {
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(172, 37, 37);
+  color: white;
+  font-size: 15px;
+}
+.search-section .search-body .search-choices .right-choices .button-choices {
+  min-width: 3%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #3ea3a1;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.search-section .search-body .search-choices .right-choices span {
+  cursor: pointer;
+  color: rgba(236, 199, 96, 0.6588235294);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #3ea3a1;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+.search-section .search-body .search-choices .left-choices {
+  margin-right: 10px;
+  min-width: 36px;
+}
+
+.search-section2 {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.search-section2 .search-body {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+}
+.search-section2 .search-body .search-choices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.search-section2 .search-body .search-choices .right-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 95%;
+}
+.search-section2 .search-body .search-choices .right-choices input {
+  width: 100%;
+  border-radius: 10px;
+}
+.search-section2 .search-body .search-choices .right-choices button {
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(172, 37, 37);
+  color: white;
+  font-size: 15px;
+}
+.search-section2 .search-body .search-choices .right-choices .button-choices {
+  min-width: 3%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #3ea3a1;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+.search-section2 .search-body .search-choices .right-choices span {
+  cursor: pointer;
+  color: rgba(236, 199, 96, 0.6588235294);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #3ea3a1;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.search-section2 .search-body .search-choices .left-choices {
+  margin-right: 10px;
+  min-width: 36px;
+}
+
+.webtoon-read-section {
+  width: 55%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.webtoon-read-section .title-rating {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.webtoon-read-section .title-rating .title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.webtoon-read-section .title-rating .rating i {
+  color: #aa841c;
+}
+
+.comic-controller {
+  position: fixed;
+  bottom: 90px;
+  right: -2px;
+  z-index: 300;
+  display: none;
+  width: 80px;
+  height: 300px;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.comic-controller button {
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  color: #ffffff;
+  background-image: linear-gradient(360deg, #574d34, #141414);
+}
+.comic-controller button i {
+  font-size: 25px;
+  color: #ffffff;
+}
+.comic-controller.active {
+  display: flex;
+}
+
+.comic-controller-toggle {
+  opacity: 0.8;
+  position: fixed;
+  bottom: -2px;
+  right: -2px;
+  z-index: 300;
+  display: flex;
+  width: 80px;
+  height: 150px;
+  padding: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.comic-controller-toggle button {
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  color: #967d38;
+  background-image: linear-gradient(360deg, #574d34, #141414);
+}
+.comic-controller-toggle button i {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.comic-controller-2 {
+  position: fixed;
+  bottom: 0;
+  background-image: linear-gradient(360deg, #1a1a1a, #0d0d0d);
+  /* right: 25%; */
+  z-index: 300;
+  display: flex;
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  bottom: 8px;
+  line-height: 1;
+  min-width: 307px;
+}
+.comic-controller-2 span {
+  cursor: pointer;
+}
+
+.card-icon {
+  display: flex;
+  position: absolute;
+  padding: 3px;
+  background-color: #131313;
+  border-radius: 5px;
+}
+.card-icon img {
+  border-radius: 100px;
+  width: 20px;
+  height: 20px;
+}
+
+.btn.btn-circle {
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50px;
+}
+.btn.btn-circle i {
+  color: #000000;
+}
+
+.mobile-nav {
+  align-items: center;
+  display: none;
+  margin-left: 20px;
+}
+
+.animate__animated.animate__slideInUp {
+  --animate-duration: 0.5s;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ffffff;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate:not(:checked) > label:hover {
+  color: #deb217;
+}
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate > input:checked ~ label:hover {
+  color: #c59b08;
+}
+.rate > input:checked ~ label:hover ~ label {
+  color: #c59b08;
+}
+.rate > input:checked + label:hover {
+  color: #c59b08;
+}
+.rate > input:checked + label:hover ~ label {
+  color: #c59b08;
+}
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+header {
+  position: fixed;
+  height: 73px;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(360deg, #1a1a1a, #0d0d0d);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header .container .nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+header .container .nav-bar .logo-wrapper {
+  height: 100%;
+  width: 249px;
+}
+header .container .nav-bar .logo-wrapper img {
+  width: 100%;
+}
+header .container .nav-bar nav {
+  width: 100%;
+}
+header .container .nav-bar nav a {
+  padding: 20px;
+  width: 50px;
+  white-space: nowrap;
+}
+header .container .input-icons {
+  margin-top: 5px;
+  position: relative;
+}
+header .container .input-icons i {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  min-width: 50px;
+  text-align: center;
+  justify-content: end;
+  right: 0;
+}
+header .container .input-icons .switch-mode {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  max-height: 30px;
+  justify-content: flex-start;
+  text-align: center;
+  align-items: center;
+}
+header .container .input-icons .switch-mode i {
+  font-size: small;
+  position: relative;
+  margin-left: -13px;
+}
+header .container .input-icons .switch-mode span {
+  font-size: 10px;
+}
+header .container .input-icons .switch-mode .dark-mode-btn {
+  cursor: pointer;
+}
+header .container .input-icons .switch-mode .light-mode-btn {
+  cursor: pointer;
+}
+header .container .input-icons input {
+  padding-right: 45px;
+}
+
+footer {
+  height: 60px;
+  background-color: rgb(16, 16, 16);
+}
+
+section {
+  margin-top: -40px;
+}
+section.hero {
+  margin-top: 73px;
+}
+section.hero .carousel-inner {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section.hero .carousel-inner .carousel-item {
+  background-color: white;
+  max-height: 100%;
+}
+section.hero .carousel-inner .carousel-item img {
+  max-height: 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+section.hero .webtoon-body .webtoon-body2 {
+  margin-top: 8px;
+}
+section.content-section {
+  padding: 50px 0;
+  min-height: calc(100vh - 355px);
+}
+
+body.dark-mode {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.109804);
+}
+body.dark-mode .form-control {
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  color: #eccf81;
+}
+body.dark-mode .form-control:focus {
+  color: #ffdc73;
+  background-color: #f8fafc !important;
+  box-shadow: 0 0 0 0.2rem rgba(90, 212, 209, 0.16);
+}
+body.dark-mode header {
+  background-color: white;
+  background-image: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1490196078);
+}
+body.dark-mode header .container .search-bar .input-icons .switch-mode span {
+  color: #000000;
+}
+body.dark-mode header .container .search-bar .input-icons .switch-mode i {
+  color: #4fbab7;
+}
+body.dark-mode .webtoon-body .webtoon-body2 button {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .webtoon-details {
+  background-color: rgb(248, 250, 252);
+  color: black;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  border: unset;
+  border: 1px solid #f1f1f1;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .webtoon-details button {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.0784313725);
+  background-color: #ffffff;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller-toggle button {
+  background-image: linear-gradient(360deg, #574d34, #ffffff);
+  background-color: #ffffff;
+  color: black;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller-toggle button i {
+  color: black;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller button {
+  background-image: linear-gradient(360deg, #574d34, #ffffff);
+  color: black;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller button i {
+  color: black;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller-2 {
+  background-image: linear-gradient(360deg, #1a1a1a, #ffffff);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-controller-2 span {
+  color: black;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-header .header-details span {
+  color: rgba(0, 0, 0, 0.6392156863);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-header .header-details .writer {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-header .header-details .writer span {
+  color: rgba(0, 0, 0, 0.8274509804);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-header .header-details .serial {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-body span {
+  color: rgba(0, 0, 0, 0.568627451);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-footer button {
+  background: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-footer i {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-details .comic-details .comic-footer .comic-footer2 .genre-details .genre {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .comic-episode i {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .list-episode-card i {
+  color: #000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .list-episode-card .episode-card {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  background-image: unset;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .list-episode-card .episode-card .details span {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .member-info {
+  background-color: white;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .bookmarks-section button {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .bookmarks-left button {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .bookmarks-title {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks-header .bookmarks-right .bookmarks-title {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks-header .bookmarks-title span {
+  background-image: unset;
+  background-color: #f8fafc;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .webtoon-choices button {
+  background-color: #6cc1bf;
+  color: #000000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:checked + label {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .webtoon-choices .bodychoices-2 input[type=radio]:not(:checked) + label {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices button {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.078431);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices .a {
+  padding-top: 5px;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices .a button {
+  background-image: unset;
+  background-color: #00cbc7;
+  color: white;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices2 button {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.078431);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices2 .a {
+  padding-top: 5px;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices2 .a button {
+  background-image: unset;
+  background-color: #00cbc7;
+  color: white;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .login {
+  background-image: unset;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .login button {
+  color: #000000;
+  background-color: unset;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .login button:hover {
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .login .login-details input {
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  color: #000000;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .login .login-details input:focus {
+  color: #000000;
+  background-color: #f8fafc !important;
+  box-shadow: 0 0 0 0.2rem rgba(90, 212, 209, 0.16);
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section .search-icon .company-icon {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  border: unset;
+  border: 1px solid #f1f1f1;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section .search-icon .company-icon .icon-wrapper {
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section .search-body {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  border: unset;
+  border: 1px solid #f1f1f1;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section .search-body .search-choices .right-choices span {
+  color: #ffffff;
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section .search-body .search-choices .right-choices button {
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section2 .search-icon .company-icon {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  border: unset;
+  border: 1px solid #f1f1f1;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section2 .search-icon .company-icon .icon-wrapper {
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section2 .search-body {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+  border: unset;
+  border: 1px solid #f1f1f1;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section2 .search-body .search-choices .right-choices span {
+  color: #ffffff;
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .search-section2 .search-body .search-choices .right-choices button {
+  background-color: #0f0c1e;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .sort-choices .a {
+  background-color: #e7e7e7;
+}
+body.dark-mode .webtoon-body .webtoon-body2 .button-choices2 .a {
+  background-color: #e7e7e7;
+}
+body.dark-mode .modal-wrapper .my-modal .modal-details {
+  background-color: white;
+}
+body.dark-mode .modal-wrapper .my-modal .modal-details .modal-details-head span {
+  color: black;
+}
+body.dark-mode .modal-message .my-modal-message .modal-details {
+  background-color: white;
+}
+body.dark-mode .modal-message .my-modal-message .modal-details .modal-details-head span {
+  color: black;
+}
+body.dark-mode .modal-message .my-modal-message .modal-details .modal-details-body textarea {
+  background-color: #e3e3e3;
+  color: black;
+}
+body.dark-mode .modal-message .my-modal-message .modal-details .modal-details-body button {
+  background-color: #000000;
+  color: white;
+}
+body.dark-mode section.hero a {
+  color: black;
+}
+body.dark-mode a {
+  color: #000000;
+}
+body.dark-mode a:hover {
+  filter: brightness(1.5) !important;
+  color: #ECCF81;
+  text-decoration: none;
+}
+body.dark-mode .modal-wrapper .my-modal .signup {
+  background-image: linear-gradient(360deg, #ffffff, #ffffff);
+}
+body.dark-mode .modal-wrapper .my-modal .signup .signup-head span {
+  color: #000000;
+}
+body.dark-mode .modal-wrapper .my-modal .signup .login-details input {
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  color: #000000;
+}
+body.dark-mode .modal-wrapper .my-modal .signup .login-details input:focus {
+  color: #000000;
+  background-color: #f8fafc !important;
+  box-shadow: 0 0 0 0.2rem rgba(90, 212, 209, 0.16);
+}
+body.dark-mode .modal-wrapper .my-modal .change-info {
+  background-image: unset;
+  background: #f8fafc;
+}
+body.dark-mode .modal-wrapper .my-modal .change-info .change-info-head span {
+  color: black;
+}
+body.dark-mode .modal-wrapper .my-modal .change-info .login-details input {
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.18) !important;
+  color: #000000;
+}
+body.dark-mode .webtoon-card {
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+  min-width: 155px;
+  background-color: #f8fafc;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1490196078);
+}
+body.dark-mode .webtoon-card .card-body2 h3 {
+  font-size: 10px;
+  color: rgb(43, 43, 43);
+  font-weight: 600;
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+body.dark-mode .webtoon-card .card-body2 .card-body3 span {
+  font-size: 11px;
+  max-width: 75px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  color: rgba(0, 0, 0, 0.59);
+}
+body.dark-mode .webtoon-card .card-body2 .card-body4 span {
+  font-size: 11px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1319px) {
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    width: calc(33.3333333333% - 4px);
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 223px;
+  }
+}
+@media (max-width: 1314px) {
+  .webtoon-ads {
+    width: calc(33.3333333333% - 4px);
+    max-width: unset;
+  }
+}
+@media (max-width: 1280px) {
+  .search-bar {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+  }
+  header .container .nav-bar nav {
+    position: absolute;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-image: linear-gradient(360deg, #1a1a1a, #0d0d0d);
+    left: 0;
+    bottom: -304px;
+    display: none;
+    flex-direction: column;
+  }
+  header .container .nav-bar nav.active {
+    display: flex;
+    animation: animate__fadeIn;
+  }
+  header .container .nav-bar nav a {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+  header .container .nav-bar nav a:not(:last-child) {
+    border-bottom: 1px solid rgba(195, 171, 112, 0.0784313725);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item {
+    display: none;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    min-width: none;
+    width: calc(16.6666666667% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    height: 220px;
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    min-width: none;
+    width: calc(16.6666666667% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    height: 220px;
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .button-choices .sort-choices-item.a {
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .button-choices2 .sort-choices-item.a {
+    background-color: rgba(66, 56, 95, 0);
+  }
+}
+@media (max-width: 1199px) {
+  .comic-details .comic-details .comic-footer button {
+    max-width: 49%;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    min-width: none;
+    width: calc(20% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    height: 220px;
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    min-width: none;
+    width: calc(20% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    height: 220px;
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    width: calc(50% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 230px;
+  }
+}
+@media (max-width: 991px) {
+  .comic-details {
+    display: contents;
+  }
+  .comic-details .comic-picture {
+    max-width: unset;
+  }
+  .comic-details .comic-details {
+    width: unset;
+    margin-left: 0px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    min-width: none;
+    width: calc(25% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    min-width: none;
+    width: calc(25% - 5px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 180px;
+  }
+  .webtoon-read-section {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .list-episode-card .episode-card .title {
+    font-size: 12px;
+  }
+  .list-episode-card .episode-card .details {
+    font-size: 12px;
+  }
+  .bookmarks-section {
+    flex-wrap: wrap;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    min-width: none;
+    width: calc(25% + 39px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    min-width: none;
+    width: calc(25% + 39px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    max-width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    width: calc(33.3333333333% - 4px);
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 190px;
+  }
+}
+@media (max-width: 795px) {
+  .modal-wrapper .my-modal .modal-details .webtoon-card {
+    min-width: unset;
+    width: calc(50% - 2px);
+  }
+}
+@media (max-width: 547px) {
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    max-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 259px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    max-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 259px;
+  }
+}
+@media (max-width: 536px) {
+  .list-episode-card .episode-card .title {
+    font-size: 12px;
+  }
+  .list-episode-card .episode-card .details {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 514px) {
+  .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    max-width: 100%;
+  }
+  .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    height: 100%;
+  }
+}
+@media (max-width: 504px) {
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 253px;
+  }
+}
+@media (max-width: 500px) {
+  .webtoon-ads {
+    width: calc(50% - 3px);
+  }
+}
+@media (max-width: 450px) {
+  .comic-details .comic-details button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  body .webtoon-body .webtoon-body2 .webtoon-choices {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  .list-episode-card .episode-card {
+    width: 100%;
+  }
+  .list-episode-card .episode-card .title {
+    font-size: 12px;
+  }
+  .list-episode-card .episode-card .details {
+    justify-content: space-between;
+    flex-direction: unset;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 382px) {
+  .comic-details .comic-details .comic-footer2 {
+    flex-direction: column;
+  }
+  .comic-details .comic-details .comic-footer2 .genre-details {
+    margin-bottom: 4px;
+    max-width: 100%;
+  }
+  .comic-details .comic-details .comic-footer2 .genre-rating {
+    text-align: unset;
+    margin-bottom: 5px;
+  }
+  .comic-details .comic-details button {
+    font-size: 10px;
+  }
+}
+@media (max-width: 375px) {
+  header .container .nav-bar .logo-wrapper {
+    height: 100%;
+    width: 200px;
+  }
+  header .container .nav-bar .logo-wrapper img {
+    width: 100%;
+  }
+  body .webtoon-body .webtoon-body2 .webtoon-choices {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    max-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 202px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    max-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 202px;
+  }
+}
+@media (max-width: 354px) {
+  body .webtoon-body .webtoon-body2 .webtoon-choices {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card {
+    max-width: unset;
+    min-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices .sort-choices-item.a .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 174px;
+  }
+}
+@media (max-width: 344px) {
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card {
+    max-width: unset;
+    min-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .bookmarks-section .bookmarks .bookmarks-card .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 170px;
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(66, 56, 95, 0);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card {
+    max-width: unset;
+    min-width: unset;
+    width: calc(50% - 3px);
+  }
+  body .webtoon-body .webtoon-body2 .sort-choices-complete .sort-choices-item .webtoon-card .img-wrapper {
+    max-width: 100%;
+    height: 163px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,483 @@
+body.dark-mode{
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.109804);
+    .form-control {
+        background-color: #f8fafc;
+        border: 1px solid rgb(0 0 0 / 18%) !important;
+        color: #eccf81;
+        &:focus{
+            color: #ffdc73;
+            background-color: #f8fafc !important;
+            box-shadow:0 0 0 0.2rem rgb(90 212 209 / 16%);
+        }
+    }
+    header{
+        background-color: white;
+        background-image: unset;
+        border-bottom: 1px solid #00000026;
+        .container{
+            .search-bar{
+                .input-icons{
+                    .switch-mode{
+                        span{
+                            color:#000000 ;
+                        }
+                        i{
+                            color:#4fbab7 ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .webtoon-body{
+        .webtoon-body2{
+            //Details
+            button{
+                color:#000000;
+            }
+            .webtoon-details{
+                background-color: rgb(248 250 252);
+                color: black;
+                box-shadow: 0px 3px 8px #00000014;
+                border: unset;
+                border: 1px solid #f1f1f1;
+                button{
+                    box-shadow: 0px 3px 10px #00000014;
+                    background-color: #ffffff;
+                }
+            }
+            .comic-controller-toggle{
+                button{
+                    background-image: linear-gradient(360deg, #574d34, #ffffff);
+                    background-color: #ffffff;
+                    color: black;
+                    i{
+                        color: black;
+                    }
+                }
+            }
+            .comic-controller{
+                button{
+                    background-image: linear-gradient(360deg, #574d34, #ffffff);
+                    color: black;
+                    i{
+                        color: black;
+                    }
+                }
+            }
+            .comic-controller-2{
+                background-image: linear-gradient(360deg, #1a1a1a, #ffffff);
+                span{
+                    color: black;
+                }
+
+            }
+            .comic-details{
+                .comic-details {
+                    .comic-header {
+                        .header-details {
+                            span{
+                                color: #000000a3;
+                            }
+                            .writer{
+                                color: #000000;
+                                span{
+                                    color: #000000d3;
+                                }
+                            }
+                            .serial{
+                                color: #000000;
+                            }
+                        }
+                    }
+                    .comic-body{
+                        span{
+                            color: #00000091;
+                        }
+                    }
+                    .comic-footer{
+                        button{
+                            background: #ffffff;
+                            box-shadow: 0px 3px 8px #00000014;
+                        }
+                        i{
+                            color: #000000;
+                        }
+                        .comic-footer2{
+                            .genre-details{
+                                .genre{
+                                    background-color: #ffffff;
+                                    color: #000000;
+                                    box-shadow: 0px 3px 8px #00000014;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .comic-episode{
+                i{color: #000000;}
+            }
+            .list-episode-card{
+                i{
+                    color: #000;
+                }
+                .episode-card{
+                    background-color: #ffffff;
+                    box-shadow: 0px 3px 8px #00000014;
+                    background-image: unset;
+                    .details{
+                        span{
+                            color: #000000;
+                        }
+                       
+                    }
+                }
+            }
+
+            //home
+            .member-info{
+                background-color: white;
+            }
+            .bookmarks-section{
+                button{
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                }
+                .bookmarks{
+                    .bookmarks-card{
+                        .bookmarks-left{
+                            button{
+                                background-color: #ffffff;
+                                box-shadow: 0px 3px 8px #00000014;
+                                color: #000000;
+                            }
+                        }
+                        .bookmarks-title{
+                            background-color: #ffffff;
+                            color: #000000;
+                            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                        }
+
+                    }
+                }
+                .bookmarks-header{
+                    .bookmarks-right{
+                        .bookmarks-title{
+                            background-color: #ffffff;
+                            color: #000000;
+                            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                        }
+                    }
+                    .bookmarks-title{
+                        span{
+                            background-image: unset;
+                            background-color: #f8fafc;
+                            border: 1px solid #f1f1f1;
+                            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                        }
+                    }
+                }
+               
+
+            }
+
+            //index
+            .webtoon-choices{
+                button{
+                    background-color: #6cc1bf;
+                    color: #000000;
+                    box-shadow: 0px 3px 8px #00000014;
+                }
+                .bodychoices-2{
+                    input[type="radio"] {
+                        &:checked {
+                            + {
+                            label {
+                                color: #000000;
+                            }
+                        }
+                        }
+                        &:not(:checked) {
+                            + {
+                                label {
+                                    color: #000000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .button-choices{
+                button{
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.078431);
+                }
+                .a{
+                    padding-top: 5px;
+                    button{
+                        background-image: unset;
+                        background-color: #00cbc7;
+                        // background-image: linear-gradient(360deg, #5ad4d1, #0d0d0d);
+                        color: white;
+                    }
+                } 
+            }
+            .button-choices2{
+                button{
+                    background-color: #ffffff;
+                    color: #000000;
+                    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.078431);
+                }
+                .a{
+                    padding-top: 5px;
+                    button{
+                        background-image: unset;
+                        background-color: #00cbc7;
+                        // background-image: linear-gradient(360deg, #5ad4d1, #0d0d0d);
+                        color: white;
+                    }
+                } 
+            }
+
+            //login
+            .login{
+                background-image: unset;
+                background-color: #ffffff;
+                box-shadow: 0px 3px 8px #00000014;
+                button{
+                    color: #000000;
+                    background-color:unset ;
+                    &:hover{
+                        color: #000000;
+                    }
+                }
+                .login-details{
+                    input{
+                        background-color: #f8fafc;
+                        border: 1px solid rgb(0 0 0 / 18%) !important;
+                        color: #000000;
+                        &:focus{
+                            color: #000000;
+                            background-color: #f8fafc !important;
+                            box-shadow:0 0 0 0.2rem rgb(90 212 209 / 16%);
+                        }
+                    }
+                }
+            }
+
+            //search
+            .search-section{
+                .search-icon{
+                    .company-icon{
+                        background-color: #ffffff;
+                        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                        border: unset;
+                        border: 1px solid #f1f1f1;
+                        .icon-wrapper{
+                            background-color: #0f0c1e;
+                        }
+                    }
+                }
+                .search-body{
+                    background-color: #ffffff;
+                    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                    border: unset;
+                    border: 1px solid #f1f1f1;
+                    .search-choices{
+                        .right-choices{
+                            span{
+                                color: #ffffff;
+                                background-color: #0f0c1e;
+                            }
+                            button{
+                                background-color: #0f0c1e;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            .search-section2{
+                .search-icon{
+                    .company-icon{
+                        background-color: #ffffff;
+                        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                        border: unset;
+                        border: 1px solid #f1f1f1;
+                        .icon-wrapper{
+                            background-color: #0f0c1e;
+                        }
+                    }
+                }
+                .search-body{
+                    background-color: #ffffff;
+                    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.0784313725);
+                    border: unset;
+                    border: 1px solid #f1f1f1;
+                    .search-choices{
+                        .right-choices{
+                            span{
+                                color: #ffffff;
+                                background-color: #0f0c1e;
+                            }
+                            button{
+                                background-color: #0f0c1e;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            .sort-choices{
+                .a{
+                    background-color: #e7e7e7;
+                }
+            }
+            .button-choices2{
+                .a{
+                    background-color: #e7e7e7;
+                }
+            }
+
+        }
+    }
+    .modal-wrapper{
+        .my-modal{
+            .modal-details{
+                background-color: white;
+                .modal-details-head{
+                    span{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .modal-message{
+        .my-modal-message{
+            .modal-details{
+                background-color: white;
+                .modal-details-head{
+                    span{
+                        color: black;
+                    }
+                }
+                .modal-details-body{
+                    textarea{
+                        background-color: #e3e3e3;
+                        color: black;
+                    }
+                    button{
+                        background-color: #000000;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    section{
+        &.hero{
+            a{
+                color: black;
+            }
+        }
+        
+    }
+
+    a{
+        color: #000000;
+        &:hover {
+            filter: brightness(1.5) !important;
+            color: #ECCF81;
+            text-decoration: none;
+        }
+    }
+    .modal-wrapper{
+        .my-modal{
+            .signup{
+                background-image: linear-gradient(360deg, #ffffff, #ffffff);
+                .signup-head{
+                    span{
+                        color: #000000;
+                    }
+                }
+                .login-details{
+                    input{
+                        background-color: #f8fafc;
+                        border: 1px solid rgb(0 0 0 / 18%) !important;
+                        color: #000000;
+                        &:focus{
+                            color: #000000;
+                            background-color: #f8fafc !important;
+                            box-shadow:0 0 0 0.2rem rgb(90 212 209 / 16%);
+                        }
+                    }
+                }
+            }
+            .change-info{
+                background-image: unset;
+                background: #f8fafc;
+                .change-info-head{
+                    span{
+                        color: black;
+                    }
+                }
+                .login-details{
+                    input{
+                        background-color: #f8fafc;
+                        border: 1px solid rgba(0, 0, 0, 0.18) !important;
+                        color: #000000;
+                    }
+                   
+                }
+            }
+        }
+    }
+    
+    .webtoon-card{
+        height: fit-content;
+        max-width: 100%;
+        min-width: 155px;
+        background-color: #f8fafc;
+        padding: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.1490196078);
+        .card-body2{
+            h3 {
+                font-size: 10px;
+                color: rgb(43 43 43);
+                font-weight: 600;
+                max-width: 100px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden; 
+            }
+            .card-body3{
+               
+                span{
+                    font-size: 11px;
+                    max-width: 75px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    display: block;
+                    color: rgb(0 0 0 / 59%);
+                }
+            }
+            .card-body4{
+                span{
+                    font-size: 11px;
+                    width: 100%;
+                    color: rgb(0 0 0 / 70%);
+                }
+              
+            }
+        }
+    }
+
+}
